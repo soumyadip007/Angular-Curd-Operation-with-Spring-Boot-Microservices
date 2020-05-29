@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserRegistrationService } from '../user-registration.service';
 
 @Component({
   selector: 'app-search-delete',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchDeleteComponent implements OnInit {
 
-  constructor() { }
+  users:any;
+  constructor(private service:UserRegistrationService) { }
 
   ngOnInit() {
+    let res=this.service.doGetAll();
+    res.subscribe((data)=>this.users=data);
   }
 
 }
