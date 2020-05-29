@@ -5,7 +5,18 @@
 
 
 <div class="container">
-   
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With ID"  name="find" [(ngModel)]="find" id="txt" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findById()">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
     </div>
 <div class="container">
 <div class="container">
@@ -16,6 +27,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Salary</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +35,7 @@
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.salary}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
           </tr>
     </tbody>
     </table>
