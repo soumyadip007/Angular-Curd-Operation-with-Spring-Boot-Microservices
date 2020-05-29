@@ -11,4 +11,17 @@ export class UserRegistrationService {
   public doReg(user){
     return this.http.post("http://localhost:8080/rest/url/save",user,{responseType:'text'});
   }
+
+
+  public doGetAll(){ 
+    return this.http.get("http://localhost:8080/rest/url/all");
+  }
+
+  public doGetId(id){
+    return this.http.get("http://localhost:8080/rest/url/find"+id);
+  }
+
+  public doDelete(id){
+    return this.http.get("http://localhost:8080/rest/url/delete"+id);
+  }
 }
