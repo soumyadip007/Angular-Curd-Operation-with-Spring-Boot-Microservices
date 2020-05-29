@@ -7,6 +7,7 @@ import { SearchDeleteComponent } from './search-delete/search-delete.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { UserRegistrationService } from './user-registration.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserRegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
