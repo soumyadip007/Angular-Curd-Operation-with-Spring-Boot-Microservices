@@ -17,11 +17,11 @@ export class UserRegistrationService {
     return this.http.get("http://localhost:8080/rest/url/all");
   }
 
-  public doGetId(id){
-    return this.http.get("http://localhost:8080/rest/url/find"+id);
+  public doGetId(find:string){
+    return this.http.get("http://localhost:8080/rest/url/find/"+find);
   }
 
   public doDelete(id){
-    return this.http.get("http://localhost:8080/rest/url/delete"+id);
+    return this.http.get("http://localhost:8080/rest/url/dlt/"+id);
   }
 }
