@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserRegistrationService {
 
-  constructor(http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   public doReg(user){
-    return this.http.post();
+    return this.http.post("http://localhost:8080/rest/url/save",user);
   }
 }
