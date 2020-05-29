@@ -10,7 +10,7 @@ export class SearchDeleteComponent implements OnInit {
 
   users:any;
   email:string;
-  find:string;
+  findId:string;
   constructor(private service:UserRegistrationService) { }
 
   ngOnInit() {
@@ -26,10 +26,10 @@ export class SearchDeleteComponent implements OnInit {
 
 
   
-  public findById(find:string){
-    console.log(find);
+  public findById(){
+    console.log(this.findId);
     console.log('Ji');
-    let res=this.service.doGetId('12');
+    let res=this.service.doGetId(this.findId);
     res.subscribe((data)=>this.users=data);
   }
 
