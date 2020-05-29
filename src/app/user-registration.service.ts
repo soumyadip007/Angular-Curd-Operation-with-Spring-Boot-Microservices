@@ -9,6 +9,6 @@ export class UserRegistrationService {
   constructor(private http:HttpClient) { }
 
   public doReg(user){
-    return this.http.post("http://localhost:8080/rest/url/save",user);
+    return this.http.post("http://localhost:8080/rest/url/save",user,{responseType:'text'});
   }
 }
